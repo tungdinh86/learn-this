@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            // var foo = {
+            //     console.log
+            // }
+
+            var human = {
+                name: 'Duy',
+                sayHello: function() {
+                    console.log(this)
+                    setTimeout(() => {
+                        console.log(this)
+                    }, 1000);
+                }
+            }
+
+            var sayHello = human.sayHello;
+            sayHello();
+
+            human.sayHello();
+        </script>
+    </body>
+</html>
