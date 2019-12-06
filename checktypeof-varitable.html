@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Check type of Variable</title>
+    <script>
+        var obj = {
+            a: 1,
+            b: '123',
+            c: Symbol(123),
+            d: true,
+            e: { "1": "13", "2": "234" },
+            f: [1, 2, 3, 4],
+            g: new Date(),
+            h: { x: 1, y: 2, z: 3 },
+            i: undefined,
+            k: null,
+            l: () => { return 123;},
+            m: function () { return true; },
+        }
+
+        Object.keys(obj).map((key, index) => {
+            var value = obj[key];
+            console.log(typeof value);
+        })
+    //
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
