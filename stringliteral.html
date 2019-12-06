@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>string literal</title>
+    <script>
+        let name = 'tungdt'
+        let hello = 'hello ${name}  ';
+        let hello1 = `hello ${name}
+     line two
+     line three
+     `;
+        console.log(hello);
+        console.log(hello1);
+
+        let x = 10;
+        let y = 20;
+        console.log(`Kết quả là: ${x} + ${y} = ${x + y}`);
+    </script>
+</head>
+
+<body>
+    Ưu điểm của của string literal: <br> <br>
+
+    - Sử dụng dấu '`' để giới hạn string nên hoàn toàn có thể dụng ' và " để viết nội dung chuỗi ký tự
+    <br>
+    - Cho phép truyền data vào trong chuỗi sử dụng ${data}
+    <br>
+    - Cho phép xử lý toán tử ngay trong chuỗi ví dụ console.log(`kết quả là: ${x+y}`) <br>
+
+</body>
+
+</html>
