@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow function Using this</title>
+    <script>
+        //Arrow function vs this
+        // Arrow function không có this của chính nó nên nó sẽ dùng this của thằng bao bên ngoài nó 
+        // vd arrow function đặt trong normal function thì nó sẽ dùng this của thằng function đó.
+
+        var obj = {
+            name: 'tungdt',
+            hello: function () {
+                var foo = () => {
+                    console.log("hello: " + this.name);
+                }
+                foo();
+            }
+        }
+
+        obj.hello();
+        // Chú ý: trường hợp nếu gán function hello ra ngoài 1 biến thì thằng this của function hello sẽ là object window
+        var hello = obj.hello;
+        hello(); // hello: nothing 
+
+
+       
+    </script>
+</head>
+
+<body>
+    wtf
+</body>
+
+</html>
