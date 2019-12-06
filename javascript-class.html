@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Class</title>
+    <script>
+        // định nghĩa 1 class mới class ten_class { ...}
+        // Các thành phần của class:
+        // constructor + prototype + 
+        // kế thừa: sử dụng extends : vd extends React.Component
+        // hàm super (); dùng để gọi hàm có sẵn ở lớp cha
+
+        class Cat {
+            constructor(name, food) {
+                this.name = name;
+                this.food = food;
+            }
+            voice() {
+                console.log(`hello ${this.name}`);
+            }
+            eat = ()=>{
+                console.log(`  ${this.name} eat ${this.food}`);
+
+            }
+        }
+
+        class Tiger extends Cat {
+
+            voice() {
+                super.voice();
+            }
+        }
+        var c = new Cat("Kitty", "fish")
+        c.voice();
+        c.eat();
+        var a = new Tiger("Mina", 'Cat');
+        a.voice();
+        a.eat();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
