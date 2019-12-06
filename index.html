@@ -1,25 +1,30 @@
 <html>
-    <head></head>
-    <body>
-        <script>
-            // var foo = {
-            //     console.log
-            // }
 
-            var human = {
-                name: 'Duy',
-                sayHello: function() {
-                    console.log(this)
-                    setTimeout(() => {
-                        console.log(this)
-                    }, 1000);
-                }
+<head></head>
+
+<body>
+    <script>
+        var foo = ()=>{
+            console.log(this);
+        }
+
+        var human = {
+            name: 'Duy',
+            sayHello: function () {
+               console.log(this)
+              //   setTimeout(foo(), 1000);
+            },
+            saysomething: () => {
+                console.log(this);
             }
+        }
 
-            var sayHello = human.sayHello;
-            sayHello();
+        var sayHello = human.sayHello;
+         sayHello();
 
-            human.sayHello();
-        </script>
-    </body>
+         human.sayHello();
+        // human.saysomething();
+    </script>
+</body>
+
 </html>

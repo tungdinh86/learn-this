@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <script>
+        // using in array map function
+        const arr = [1, 2, 3, 4, 5];
+        let total = 0;
+        arr.map(x => console.log(x));
+
+        //arrowfunction and rest paramenter
+        const func1 = (...a) => {
+            // console.log(a);
+            let b = a.reduce((x, y) => x + y, 0);
+            console.log(b);
+        }
+
+        func1(...arr);
+
+
+        /// arrow function and spread syntax
+
+        const func2 = (a, c, b) => {
+            console.log(a + b + c);
+        }
+        func2(...arr);
+
+        //
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
