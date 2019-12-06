@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learn ditructuring
+
+    </title>
+    <script>
+        // Tạm hiểu làm 1 hàm gán ngược lại so với Object Assign,  cho phép copy từng phần tử của Array hoặc Object có  sẵn ra thành nhiều phần tử ở bên trái của phép gán.
+        {
+            let arr = [1, 2, 3, 4, 5, 6, 7];
+            let [a, b, c] = arr;
+            console.log(a, b, c);
+        }
+        ///
+        {
+            const [a, ...b] = [1, 2, 3];
+            console.log(a); // 1
+            console.log(b); // [2, 3]
+        }
+        /////  OBJECT DESTRUCTURING   ///////////////////////////////////////////////////////////////
+        {
+            const o = { p: 42, q: true };
+            const { p, q } = o;
+
+            console.log(p); // 42
+            console.log(q); // true 
+        }
+        {
+            const o = { p: 42, q: true };
+            const { p: a, q: b } = o;
+
+            console.log(a); // 42
+            console.log(b); // true 
+        }
+        {
+            const person = {
+                name: 'tungdt',
+                age: 33
+            }
+            const { name, age } = person;
+            console.log(`Họ và tên: ${name}`);
+            console.log(`Số tuổi: ${age}`);
+        }
+        {
+            var people = [
+                {
+                    name: 'tungdt',
+                    family: {
+                        father: 'Mr A',
+                        mother: 'Mrs B'
+                    },
+                    job: 'it'
+                },
+                {
+                    name: 'tuan',
+                    family: {
+                        father: 'Mr A',
+                        mother: 'Mrs B'
+                    },
+                    job: 'it'
+                },
+                {
+                    name: 'Dinh',
+                    family: {
+                        father: 'Mr A',
+                        mother: 'Mrs B'
+                    },
+                    job: 'it'
+                },
+            ];
+            for (const x of people) {
+                let { name: tuan, family: { father } } = x;
+                console.log(`Họ và tên: ${tuan} - Tên bố: ${father}`);
+            }
+        }
+        {
+            //Rest
+            const obj = { a: 1, b: 2, c: 3, d: 4, e: 5 };
+            let { a, c,e, ...rest } = obj;
+            console.log(a, c, e);
+            console.log(rest);
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
