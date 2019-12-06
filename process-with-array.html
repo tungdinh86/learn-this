@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Process with Array</title>
+    <script>
+        const arr = [1, 2, 3, 4, 5, 6];
+        {
+            // them 1 doi tuong vao array
+            let arr1 = [...arr, 1, , , , 5];
+            //  let arr1 = [, 1, , ,...arr , 5];
+            console.log(arr1);
+        }
+
+        {
+            // sua doi tuong theo vi tri
+            arr[0] = 100;
+            console.log(arr);
+        }
+
+        {
+            // Xóa đối tượng trong arr --> sử dụng filter
+            let arr1 = arr.filter(x => x !== 2);
+            console.log(arr1);
+            console.log(arr);
+            // xóa đối tượng theo vị trí
+            let arr2 = arr.filter((val, index) => index !== 0 && index !== 3);
+            console.log(arr2);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
