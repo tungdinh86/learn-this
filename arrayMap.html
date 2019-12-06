@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Array map function</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        // Array.prototype.map() là hàm mặc định của Array cho phép truy xuất và xử lý riêng từng phần tử của mảng hiện tại, trả ra kết quả là 1 mảng mới tương ứng với mảng hiện tại
+
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8,];
+        const b = arr.map((x) => {
+            return x  ;
+        });
+        console.log(b);
+        ////
+        const c = Array.prototype.map.call(arr, x => x * x);
+        console.log(c);
+
+    </script>
+</head>
+
+<body>
+    <h1 class="text-center">Hello World</h1>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

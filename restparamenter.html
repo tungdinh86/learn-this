@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script>
+        function add(x, ...y) {
+            var total = x;
+            y.forEach(element => {
+                total += element;
+            });
+            return total;
+        }
+
+        let a = add(1, 2, 3, 4, 5 );
+        console.log(a);
+    </script>
+</head>
+
+<body>
+Rest paramenter là cách viết tắt của hàm sử dụng trong trường hợp số lượng paramenter là không xác định - nhưng chắc chắn là trùng kiểu dữ liệu ( int, number or string, char).
+<br />
+Chú ý: Rest paramenter chỉ có thể ở cuối cùng trước dấu đóng ngoặc tròn khi khai báo hàm . nếu không sẽ báo lỗi
+<br/>
+Rest paramenter sẽ dồn các paramenter truyền khi gọi hàm thành 1 array. Xử lý Rest paramenter theo kiểu xử lý mảng.
+<br/>
+Trước khi có đối tượng Reset paramenter thì người ta thường sử dụng arguments để xử lý đối tượng truyền vào chưa xác định của hàm - cũng bind ra dạng Array. Tuy nhiên Arrow function sẽ không sử dụng đối tượng Arguments này nên có thể không cần tìm hiểu về Arguments nữa.
+</body>
+
+</html>

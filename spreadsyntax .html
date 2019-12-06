@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <script>
+        function SpreadTest1() {
+
+            const arr = [1, 2, 3];
+            var arr1 = arr;
+
+            arr1.push(4);
+            console.log(arr1);
+            console.log(arr);
+            var arr2 = [...arr, 5];
+            console.log(arr2);
+            console.log(arr);
+        }
+
+      
+
+        function SpreadTest3() {
+            var obj1 = {
+                name: 'tungdt',
+                age: 33
+            };
+            var obj2 = { name: 'tungdt', namsinh: 1986 };
+            var obj3 = { ...obj1, ...obj2 };
+            var obj4 = Object.assign({}, obj1, obj2); //  có thể thấy cách viết bên trên sẽ ngắn gọn hơn việc sử dụng hàm Object.assign
+            // Đối tượng json được copy sẽ ghi đè nếu trùng key  
+            console.log(obj3);
+            console.log(obj4);
+        }
+
+        // SpreadTest1();
+        // SpreadTest2();
+        SpreadTest3();
+    </script>
+</head>
+
+<body>
+    SPREAD OPERATOR
+    <br>
+    - Sử dụng khi muốn copy mảng hiện tại và add thêm phần tử vào mảng đó và khi mảng mới có sự thay đổi thì không gây
+    ảnh hưởng tới mảng cũ vì nó khởi tạo giá trị mới <br>
+    <i>
+        This copies arr into arr2. Now we can do things on arr2 and any changes done to arr2 will not have any effect
+        arr.</i>
+    <br>
+  Chú ý: dù cách viết giống nhau nhưng Rest paramenter là đối số  còn Spread Operator là toán tử chứ không phải đối số. Tránh việc sử dụng nhầm 
+
+</body>
+
+</html>
