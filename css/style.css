@@ -1,0 +1,18 @@
+html {
+font-size: 18px;
+}
+.box {
+color: white;
+display: flex;
+font-size:  20px;
+}
+.em {
+width: 10em;
+height: 10em;
+background-color: red;
+}
+.rem {
+width: 10rem;
+height: 10rem;
+background-color: blue;
+}
